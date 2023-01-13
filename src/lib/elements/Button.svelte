@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { createEventDispatcher } from "svelte";
     export let href: string = "";
     export let fontColor: string = "inherit";
     export let fontSize: string = "inherit";
@@ -8,6 +9,14 @@
     export let height: string = "auto";
     export let rounded: string = "0";
     export let border: string = "1px solid";
+    export let eventName: string = "event";
+
+    const dispatcher = createEventDispatcher();
+    function emitEvent() {
+        dispatcher(eventName, {}, {
+            cancelable: true
+        });
+    }
 </script>
 
 {#if href !== ""}
@@ -34,7 +43,8 @@
         --height: ${height};
         --rounded: ${rounded};
         --border: ${border}
-    `}>
+    `}
+    on:click={emitEvent}>
         <slot />
     </button>
 {/if}

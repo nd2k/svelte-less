@@ -2,13 +2,15 @@
     import "iconify-icon";
     export let icon: string = 'mdi:user-circle';
     export let size: number = 2;
-    export let color: string = "var(--secondary-color)";
+    export let color: string = "inherit";
+    export let rotate: number = 0;
 </script>
 
 <iconify-icon class="icon" {icon}
     style={
         `font-size: ${size}rem;
-        color: ${color};`
+        color: ${color};
+        transform: rotate(${rotate}deg);`
     }
 />
 
