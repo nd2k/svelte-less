@@ -10,10 +10,11 @@
     export let width: string = "auto";
     export let height: string = "auto";
     export let flex: number = 0;
+    export let className: string = "";
 </script>
 
 <div 
-    class="flex-component"
+    class={`flex-component ${className}`}
     style={
         `flex-direction: ${direction};
         justify-content: ${justify};
@@ -32,5 +33,6 @@
     .flex-component {
         display: flex;
         background-color: inherit;
+        color: inherit;
     }
 </style>

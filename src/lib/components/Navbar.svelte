@@ -16,7 +16,7 @@
         toggleSidebarFromStore.toggle();
     }
 </script>
-<nav class="navbar">
+<nav class={$toggleSidebarFromStore ? "navbar" : "navbar close"}>
     <Flex align={Align.CENTER} height="100%" width="100%">
         <div class="right-menu">
             <Flex justify={Justify.FLEX_START} align={Align.CENTER} columnGap="2rem">
@@ -33,7 +33,7 @@
                         </div>
                     {:else}
                         <div class="icon">
-                            <Icon icon="material-symbols:menu-open-rounded" rotate={180}/>
+                            <Icon icon="material-symbols:menu-open-rounded" rotate={180} />
                         </div>
                     {/if}
                 </Button>
@@ -80,7 +80,6 @@
 
 <style>
     .navbar {
-        width: 100%;
         height: 2rem;
     }
     .sub-menu {
