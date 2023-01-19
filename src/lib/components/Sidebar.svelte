@@ -33,7 +33,7 @@
             </Flex>
         </div>
         <div class="bottom-sidebar">
-            <Flex justify={Justify.CENTER} align={Align.CENTER}>
+            <Flex direction={Direction.COLUMN} justify={Justify.CENTER} align={Align.CENTER}>
                 <a href="/">
                     <Icon icon="ph:gear-six-fill" />
                     <div class="nav-link-label">Settings</div>
@@ -52,7 +52,7 @@
         transition: all 0.5s;
     }
     .sidebar.open {
-        width: 15rem;
+        width: 12rem;
     }
     .open img {
         width: 8rem;
@@ -63,18 +63,19 @@
         width: 3rem;
         height: 3rem;
         display: block;
+        transition: all 0.5s;   
     }
     .open .top-sidebar {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 15rem;
+        width: 12rem;
         height: 10rem;
     }
     img {
         width: 3rem;
         height: 3rem;
-        transition: all 0.5s;        
+        transition: all 0.5s;    
     }
     .middle-sidebar {
         flex: 1;
@@ -86,16 +87,14 @@
     }
     .open a {
         justify-content: flex-start;
-        padding-left: 3rem;
         width: calc(100% - 3.4rem);
     }
     a {
-        width: calc(100% - 0.4rem);
+        width: 100%;
         text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0.5rem 0;
     }
     .middle-sidebar a:hover,
     .bottom-sidebar a:hover {

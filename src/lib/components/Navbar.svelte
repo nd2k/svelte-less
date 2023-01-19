@@ -86,7 +86,7 @@
         position: absolute;
         right: 1rem;
         z-index: 10;
-        background-color: var(--background-color-1);
+        background-color: var(--grey-color);
         padding: 1rem;
         border-radius: 1rem;
     }
